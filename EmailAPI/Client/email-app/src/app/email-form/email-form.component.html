@@ -1,0 +1,5 @@
+<div>
+  <input type="text" [(ngModel)]="email" (input)="validateEmail()" placeholder="Enter email" />
+  <button [disabled]="!isValidEmail" (click)="sendEmail()">Send Email</button>
+</div>
+<p *ngIf="responseTime">Response Time: {{ responseTime | date:'medium' }}</p>
